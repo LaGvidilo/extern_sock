@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+import extern_sock_udp as udp
+
+
+
+
+def __main__():
+	serv_address=raw_input("Server IP> ")
+	while 1==1:
+		msg=raw_input("reponse> ")
+		R = udp.send_wait_recv(serv_address=serv_address,reponse=msg,send_port=21566,recv_port=21568,print_s=0)
+		if R=='Done':
+			print "Accusé de recption.\nLe serveur à reçu correctement les données."
+	
+__main__()

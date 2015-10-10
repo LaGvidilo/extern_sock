@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+import extern_sock_udp as udp
+
+
+def __main__():
+	W=1
+	while W==1:
+		R = udp.recv_wait_send(reponse="Done",print_s=0)
+		print "COMMANDE:",R
+
+__main__()
